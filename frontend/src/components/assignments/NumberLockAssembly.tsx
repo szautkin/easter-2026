@@ -5,8 +5,7 @@ import { TouchBackend } from 'react-dnd-touch-backend'
 import { useAssignment, useGameConfig } from '@/hooks/useGameConfig'
 import { useGameStore } from '@/store/gameStore'
 import { Confetti } from '@/components/shared/Confetti'
-import confetti from 'canvas-confetti'
-import { cn } from '@/lib/utils'
+import { cn, fireSparkle } from '@/lib/utils'
 
 const ITEM_TYPE = 'PAIR'
 const isTouchDevice = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
@@ -51,19 +50,6 @@ function DraggablePair({
       {value}
     </div>
   )
-}
-
-function fireSparkle(element: HTMLElement) {
-  const rect = element.getBoundingClientRect()
-  confetti({
-    particleCount: 30,
-    spread: 50,
-    origin: { x: (rect.left + rect.width / 2) / window.innerWidth, y: (rect.top + rect.height / 2) / window.innerHeight },
-    colors: ['#FCD34D', '#1B4F8A', '#22C55E', '#A855F7'],
-    startVelocity: 20,
-    gravity: 0.8,
-    ticks: 60,
-  })
 }
 
 function NumberLockInner({ assignmentId }: { assignmentId: number }) {

@@ -64,7 +64,7 @@ function TimeUpScreen() {
 
 export default function App() {
   const phase = useGameStore((s) => s.phase)
-  const timer = useGameStore((s) => s.timer)
+  const isTimeUp = useGameStore((s) => s.timer.remainingSeconds <= 0 && s.timer.isRunning && s.phase !== 'complete')
   const activePath = useGameStore((s) => s.activePath)
   const returnToHub = useGameStore((s) => s.returnToHub)
   const isMaster = useMasterMode()
@@ -76,8 +76,6 @@ export default function App() {
       </div>
     )
   }
-
-  const isTimeUp = timer.remainingSeconds <= 0 && timer.isRunning && phase !== 'complete'
 
   if (isTimeUp) {
     return (

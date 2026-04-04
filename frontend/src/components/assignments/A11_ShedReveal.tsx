@@ -6,8 +6,7 @@ import { useAssignment, useGameConfig } from '@/hooks/useGameConfig'
 import { useGameStore } from '@/store/gameStore'
 import { MediaPlayer } from '@/components/shared/MediaPlayer'
 import { Confetti } from '@/components/shared/Confetti'
-import confetti from 'canvas-confetti'
-import { cn } from '@/lib/utils'
+import { cn, fireSparkle } from '@/lib/utils'
 
 const ITEM_TYPE = 'LETTER'
 const isTouchDevice = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
@@ -55,18 +54,6 @@ function DraggableLetter({
   )
 }
 
-function fireLetterSparkle(element: HTMLElement) {
-  const rect = element.getBoundingClientRect()
-  confetti({
-    particleCount: 30,
-    spread: 50,
-    origin: { x: (rect.left + rect.width / 2) / window.innerWidth, y: (rect.top + rect.height / 2) / window.innerHeight },
-    colors: ['#FCD34D', '#1B4F8A', '#22C55E', '#A855F7'],
-    startVelocity: 20,
-    gravity: 0.8,
-    ticks: 60,
-  })
-}
 
 function ShedRevealInner() {
   const assignment = useAssignment(11)
@@ -109,7 +96,7 @@ function ShedRevealInner() {
     if (allCorrect) return
     if (letters.join('') === wordCode) {
       setAllCorrect(true)
-      letterRefs.current.forEach((el) => { if (el) fireLetterSparkle(el) })
+      letterRefs.current.forEach((el) => { if (el) fireSparkle(el) })
     }
   }, [letters, allCorrect, wordCode])
 
