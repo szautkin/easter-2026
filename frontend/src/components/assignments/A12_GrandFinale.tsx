@@ -65,7 +65,7 @@ export function A12_GrandFinale() {
               {wordLockValue.split('').map((letter, i) => (
                 <div
                   key={i}
-                  className="w-16 h-20 flex items-center justify-center text-4xl font-bold bg-yellow-accent text-blue-primary rounded-xl border-3 border-blue-primary"
+                  className="w-16 h-20 flex items-center justify-center text-4xl font-bold bg-yellow-accent text-blue-primary rounded-xl border-[3px] border-blue-primary"
                 >
                   {letter}
                 </div>
@@ -86,11 +86,11 @@ export function A12_GrandFinale() {
           </p>
 
           {/* Celebration emojis */}
-          <div className="flex gap-4 text-5xl animate-float">
-            <span>🐰</span>
-            <span>🎁</span>
-            <span>🍫</span>
-            <span>🏆</span>
+          <div className="flex gap-4 text-5xl">
+            <span className="animate-float" style={{ animationDelay: '0s' }}>🐰</span>
+            <span className="animate-float" style={{ animationDelay: '0.4s' }}>🎁</span>
+            <span className="animate-float" style={{ animationDelay: '0.8s' }}>🍫</span>
+            <span className="animate-float" style={{ animationDelay: '1.2s' }}>🏆</span>
           </div>
         </div>
       )}

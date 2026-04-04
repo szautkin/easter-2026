@@ -1,0 +1,4 @@
+- [Go-Live Status](go-live-status.md) -- Easter 2026 launches April 5; code is ready, testing and physical prep are the remaining risks
+- [Active Playlists](active-playlists.md) -- WORD_PATH=[15,13,14,4,11] NUMBER_PATH=[101,102,104,105,106,103,107]; original A1-A10 are inactive
+- [Video Architecture](video-architecture.md) -- 3 local family videos unused in active paths; 8 GDrive + 2 YouTube videos are live dependencies
+- [Scope Decision](scope-decision-family-videos.md) -- Family video assignments (A3,A6,A9) dropped from active playlists, replaced by progressive disclosure assignments

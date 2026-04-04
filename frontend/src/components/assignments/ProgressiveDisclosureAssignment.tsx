@@ -74,6 +74,7 @@ function MagicWordContent({
         <button
           onClick={handleSubmit}
           disabled={!input.trim()}
+          aria-label="Submit magic word"
           className={cn(
             'h-12 px-5 rounded-lg font-bold transition-all',
             input.trim()

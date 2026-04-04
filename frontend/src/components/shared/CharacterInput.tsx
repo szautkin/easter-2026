@@ -86,7 +86,7 @@ export function CharacterInput({
             disabled={disabled}
             autoComplete="off"
             className={cn(
-              'w-14 h-16 text-center text-3xl font-bold rounded-xl border-2 outline-none transition-all duration-200 font-mono',
+              'w-16 h-16 text-center text-3xl font-bold rounded-xl border-2 outline-none transition-all duration-200 font-mono',
               'focus:border-blue-primary focus:shadow-glow-blue',
               !char && !disabled && 'bg-[#F8FAFC] border-dashed border-blue-light',
               char && !error && !success && 'bg-white border-blue-primary',

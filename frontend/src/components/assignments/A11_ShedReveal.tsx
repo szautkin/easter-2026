@@ -77,7 +77,7 @@ function ShedRevealInner() {
           <span className="text-xs font-bold text-text-secondary uppercase tracking-wider">Lock 2 — Word Code</span>
           <div className="flex gap-2">
             {wordCode.split('').map((l, i) => (
-              <div key={i} className="w-16 h-20 flex items-center justify-center text-3xl font-bold bg-yellow-accent text-blue-primary rounded-xl border-3 border-blue-primary shadow-lg">{l}</div>
+              <div key={i} className="w-16 h-20 flex items-center justify-center text-3xl font-bold bg-yellow-accent text-blue-primary rounded-xl border-[3px] border-blue-primary shadow-lg">{l}</div>
             ))}
           </div>
         </div>

@@ -11,7 +11,10 @@ export const AnimatedLines = memo(function AnimatedLines({ lines, icon }: Animat
 
   useEffect(() => {
     if (visibleLines >= lines.length) return
-    const timer = setTimeout(() => setVisibleLines((v) => v + 1), 800)
+    const timer = setTimeout(() => {
+      setVisibleLines((v) => v + 1)
+      if ('vibrate' in navigator) navigator.vibrate(30)
+    }, 800)
     return () => clearTimeout(timer)
   }, [visibleLines, lines.length])
 

@@ -212,7 +212,7 @@ export function HubPage() {
           </div>
           <button
             onClick={handleOpenTreasure}
-            className="w-full py-5 rounded-2xl font-bold text-2xl bg-yellow-accent text-blue-primary border-3 border-blue-primary shadow-lg hover:scale-105 active:scale-95 transition-all animate-pop"
+            className="w-full py-5 rounded-2xl font-bold text-2xl bg-yellow-accent text-blue-primary border-[3px] border-blue-primary shadow-lg hover:scale-105 active:scale-95 transition-all animate-pop"
           >
             🐰 OPEN THE YELLOW CHEST! 🐰
           </button>
