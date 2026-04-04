@@ -1,0 +1,1 @@
+- [Assignments 1-7 Patterns](project_assignments_1_7.md) — shared answer-check, multi-step, video-gate, and solve flow patterns for A01-A07

@@ -1,0 +1,484 @@
+{
+  "meta": {
+    "event": "Easter 2026 Egg Hunt",
+    "version": "2.0",
+    "lastUpdated": "2026-03-28"
+  },
+
+  "timer": {
+    "durationSeconds": 3600,
+    "warningAtSeconds": 600,
+    "urgentAtSeconds": 300,
+    "softTimeout": true
+  },
+
+  "codes": {
+    "numberLock": {
+      "values": [18, 38, 18],
+      "displayFormat": "XX-XX-XX",
+      "selectorOptions": {
+        "min": 10,
+        "max": 99
+      }
+    },
+    "wordLock": {
+      "value": "SHED",
+      "selectorOptions": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    }
+  },
+
+  "eggs": {
+    "numbers": [23, 37, 42, 56, 64, 71, 85, 92, 47, 87],
+    "words": ["WACKY", "GOOFY", "ZIPPY", "SILLY", "BUBBY", "NINJA", "BANJO", "YUMMY", "FUNKY", "JELLY"]
+  },
+
+  "intake": {
+    "instructions": "Match each riddle to the egg slip you found!",
+    "transitionMessage": "All eggs registered! Now the REAL challenge begins...",
+    "riddles": [
+      {
+        "id": "W1",
+        "type": "word",
+        "riddle": "Who is Mickey Mouse's tall, clumsy best friend? He trips a lot and laughs funny!",
+        "answer": "GOOFY",
+        "hint": "He's a Disney character and a dog",
+        "illustration": "bunny"
+      },
+      {
+        "id": "W2",
+        "type": "word",
+        "riddle": "A warrior dressed in black who moves in silence and throws stars...",
+        "answer": "NINJA",
+        "hint": "Think martial arts and stealth",
+        "illustration": "chick"
+      },
+      {
+        "id": "W3",
+        "type": "word",
+        "riddle": "What stringed instrument does Kermit the Frog play while singing on a log?",
+        "answer": "BANJO",
+        "hint": "It's round and has strings — not a guitar!",
+        "illustration": "egg_blue"
+      },
+      {
+        "id": "W4",
+        "type": "word",
+        "riddle": "What do you say when food tastes SO good you want more?",
+        "answer": "YUMMY",
+        "hint": "Rhymes with 'tummy'",
+        "illustration": "flower"
+      },
+      {
+        "id": "W5",
+        "type": "word",
+        "riddle": "What wiggly, jiggly treat comes in a bowl and wobbles when you poke it?",
+        "answer": "JELLY",
+        "hint": "It's a dessert that shakes — not jam!",
+        "illustration": "egg_pink"
+      },
+      {
+        "id": "W6",
+        "type": "word",
+        "riddle": "What word means totally crazy, wild, and out there? '___ Races' is a cartoon!",
+        "answer": "WACKY",
+        "hint": "Starts with W, rhymes with 'tacky'",
+        "illustration": "basket"
+      },
+      {
+        "id": "W7",
+        "type": "word",
+        "riddle": "If something is super-duper fast — like a hummingbird — it's really ___!",
+        "answer": "ZIPPY",
+        "hint": "Starts with Z, rhymes with 'hippy'",
+        "illustration": "bunny_hop"
+      },
+      {
+        "id": "W8",
+        "type": "word",
+        "riddle": "What's the opposite of serious? Making funny faces and giggling is being ___",
+        "answer": "SILLY",
+        "hint": "Rhymes with 'hilly' and 'Lily'",
+        "illustration": "egg_green"
+      },
+      {
+        "id": "W9",
+        "type": "word",
+        "riddle": "What's a sweet nickname that sounds like 'baby' but cuter? Rhymes with 'hubby'",
+        "answer": "BUBBY",
+        "hint": "Starts with B, a term grandma might use",
+        "illustration": "chick_hat"
+      },
+      {
+        "id": "W10",
+        "type": "word",
+        "riddle": "What word describes a groovy beat that makes you want to dance? '___ town'",
+        "answer": "FUNKY",
+        "hint": "Starts with F, think disco and funk music",
+        "illustration": "egg_gold"
+      },
+      {
+        "id": "N1",
+        "type": "number",
+        "riddle": "What is 15 + 8?",
+        "answer": 23,
+        "hint": "Count up 8 from 15",
+        "illustration": "carrot"
+      },
+      {
+        "id": "N2",
+        "type": "number",
+        "riddle": "Your normal body temperature in Celsius — when you're healthy, not sick!",
+        "answer": 37,
+        "hint": "It's between 36 and 38",
+        "illustration": "sun"
+      },
+      {
+        "id": "N3",
+        "type": "number",
+        "riddle": "What is 6 × 7?",
+        "answer": 42,
+        "hint": "Six groups of seven",
+        "illustration": "egg_purple"
+      },
+      {
+        "id": "N4",
+        "type": "number",
+        "riddle": "What is 8 × 7?",
+        "answer": 56,
+        "hint": "Eight groups of seven",
+        "illustration": "tulip"
+      },
+      {
+        "id": "N5",
+        "type": "number",
+        "riddle": "How many squares on a chess board? 8 rows × 8 columns!",
+        "answer": 64,
+        "hint": "Multiply 8 by itself",
+        "illustration": "lamb"
+      },
+      {
+        "id": "N6",
+        "type": "number",
+        "riddle": "What is 100 – 29?",
+        "answer": 71,
+        "hint": "Take away 30 then add 1 back",
+        "illustration": "egg_orange"
+      },
+      {
+        "id": "N7",
+        "type": "number",
+        "riddle": "What is 17 × 5?",
+        "answer": 85,
+        "hint": "17 × 10 = 170, now halve it",
+        "illustration": "butterfly"
+      },
+      {
+        "id": "N8",
+        "type": "number",
+        "riddle": "What is 46 + 46?",
+        "answer": 92,
+        "hint": "Double 46",
+        "illustration": "daisy"
+      },
+      {
+        "id": "N9",
+        "type": "number",
+        "riddle": "What is 50 – 3?",
+        "answer": 47,
+        "hint": "Almost fifty!",
+        "illustration": "egg_red"
+      },
+      {
+        "id": "N10",
+        "type": "number",
+        "riddle": "A piano has 88 keys. Subtract 1. What do you get?",
+        "answer": 87,
+        "hint": "88 minus 1",
+        "illustration": "robin"
+      }
+    ]
+  },
+
+  "assignments": [
+    {
+      "id": 1,
+      "phase": 1,
+      "title": "The Great Egg Sum",
+      "icon": "✏️",
+      "type": "multi_step_math",
+      "assignedTo": "both",
+      "reveals": { "type": "digit", "value": 1 },
+      "steps": [
+        {
+          "prompt": "Add ALL your egg numbers together:\n23 + 37 + 42 + 56 + 64 + 71 + 85 + 92 + 47 + 87 = ?",
+          "answer": 604,
+          "inputType": "number"
+        },
+        {
+          "prompt": "Now add the digits of 604 together: 6 + 0 + 4 = ?",
+          "answer": 10,
+          "inputType": "number"
+        },
+        {
+          "prompt": "One more time: 1 + 0 = ?",
+          "answer": 1,
+          "inputType": "number"
+        }
+      ],
+      "successMessage": "You found your first code digit: 1!",
+      "hint": "Try adding in pairs: 23+87=110, 37+63=... wait, use your own trick!"
+    },
+    {
+      "id": 2,
+      "phase": 1,
+      "title": "The Scale Explorer",
+      "icon": "🎹",
+      "type": "single_answer",
+      "assignedTo": "boy",
+      "reveals": { "type": "digit", "value": 8 },
+      "prompt": "Go to the piano! Play a C major scale from Middle C up to the next C.\n\nC – D – E – F – G – A – B – C\n\nHow many keys did you press in total?",
+      "answer": 8,
+      "inputType": "number",
+      "successMessage": "You discovered digit 8!",
+      "bonusText": "The octave comes from Latin 'octo' = eight. Too easy for Grade 8!",
+      "hint": "Count every key you pressed, including the first C and the last C"
+    },
+    {
+      "id": 3,
+      "phase": 1,
+      "title": "Grandma Juliaa's Video Question",
+      "icon": "🎬",
+      "type": "video_question",
+      "assignedTo": "girl",
+      "reveals": { "type": "digit", "value": 3 },
+      "video": {
+        "src": "/assets/videos/grandma_juliaa.mp4",
+        "poster": "/assets/videos/grandma_juliaa_poster.jpg",
+        "subtitles": "/assets/videos/grandma_juliaa.vtt",
+        "fallbackText": "Grandma Juliaa says: Look at all your funny egg words — WACKY, GOOFY, NINJA, and all the others. How many of those words have the letter N hiding inside them? Count carefully!"
+      },
+      "prompt": "How many egg words contain the letter N?",
+      "answer": 3,
+      "inputType": "number",
+      "successMessage": "Three words with N! Digit 3 unlocked!",
+      "hint": "Check each word one by one: W-A-C-K-Y... any N? Now try the next word..."
+    },
+    {
+      "id": 4,
+      "phase": 2,
+      "title": "The Ssssnake Poem",
+      "icon": "📖",
+      "type": "poem_riddle",
+      "assignedTo": "girl",
+      "reveals": { "type": "letter", "value": "S" },
+      "poem": [
+        "I slither and hiss upon the ground,",
+        "I have no legs yet move around,",
+        "I shed my skin when I need space —",
+        "Now name the creature! Solve this case!"
+      ],
+      "prompt": "What creature is it? Type the FIRST letter of its name!",
+      "answer": "S",
+      "inputType": "letter",
+      "successMessage": "Ssssuperb! Letter S discovered!",
+      "hint": "It's a long reptile that goes 'hissss'"
+    },
+    {
+      "id": 5,
+      "phase": 2,
+      "title": "The Alphabet Chain",
+      "icon": "🔗",
+      "type": "chain_logic",
+      "assignedTo": "both",
+      "reveals": { "type": "letter", "value": "H" },
+      "chainFrom": { "assignmentId": 2, "label": "the piano number" },
+      "prompt": "Remember the number from the piano? It was 8.\n\nNow count in the alphabet:\nA=1, B=2, C=3, D=4, E=5, F=6, G=7, ?=8\n\nWhat letter lives at position 8?",
+      "answer": "H",
+      "inputType": "letter",
+      "successMessage": "H marks the spot! Letter H unlocked!",
+      "hint": "Sing the alphabet and count on your fingers up to 8"
+    },
+    {
+      "id": 6,
+      "phase": 2,
+      "title": "Grandma Vera & Grandpa Tolia's Video",
+      "icon": "🎬",
+      "type": "video_question",
+      "assignedTo": "girl",
+      "reveals": { "type": "letter", "value": "E" },
+      "video": {
+        "src": "/assets/videos/grandma_vera_grandpa_tolia.mp4",
+        "poster": "/assets/videos/grandma_vera_poster.jpg",
+        "subtitles": "/assets/videos/grandma_vera.vtt",
+        "fallbackText": "Христос Воскрес, діточки! Today is a special holiday. In English it's called... what? And what do bunnies hide for you? Both words start with the same letter — which one?"
+      },
+      "prompt": "What letter do EASTER and EGGS both start with?",
+      "answer": "E",
+      "inputType": "letter",
+      "successMessage": "Egg-cellent! Letter E is yours!",
+      "hint": "Sound out E-A-S-T-E-R slowly..."
+    },
+    {
+      "id": 7,
+      "phase": 2,
+      "title": "The Vlad Equation",
+      "icon": "👨‍👩‍👧‍👦",
+      "type": "multi_step_math",
+      "assignedTo": "boy",
+      "reveals": { "type": "letter", "value": "D" },
+      "steps": [
+        {
+          "prompt": "Your half-brother's name is VLAD.\nHow many letters in VLAD?",
+          "answer": 4,
+          "inputType": "number"
+        },
+        {
+          "prompt": "The 4th letter of the alphabet is...?\nA(1) · B(2) · C(3) · ?(4)",
+          "answer": "D",
+          "inputType": "letter"
+        }
+      ],
+      "successMessage": "D as in Daryna, your cousin! Letter D found!",
+      "hint": "Count: V-L-A-D. How many is that?"
+    },
+    {
+      "id": 8,
+      "phase": 3,
+      "title": "The Semitone Puzzle",
+      "icon": "🎹",
+      "type": "multi_step_math",
+      "assignedTo": "boy",
+      "reveals": { "type": "lock_number", "position": 0, "value": 18 },
+      "steps": [
+        {
+          "prompt": "Back to the piano! How many semitones in one octave?\n(C→C#→D→D#→E→F→F#→G→G#→A→A#→B→C)",
+          "answer": 12,
+          "inputType": "number"
+        },
+        {
+          "prompt": "How many semitones from C to F?\n(C→C#→D→D#→E→F)",
+          "answer": 5,
+          "inputType": "number"
+        },
+        {
+          "prompt": "Add those: 12 + 5 = 17\nNow add your very first digit (from Assignment 1): 17 + 1 = ?",
+          "answer": 18,
+          "inputType": "number"
+        }
+      ],
+      "successMessage": "18 is the FIRST number of the combination lock!",
+      "hint": "Count every key including black ones"
+    },
+    {
+      "id": 9,
+      "phase": 3,
+      "title": "The Cousin Calculator",
+      "icon": "🎬",
+      "type": "video_table_math",
+      "assignedTo": "both",
+      "reveals": { "type": "lock_number", "position": 1, "value": 38 },
+      "video": {
+        "src": "/assets/videos/aunt_katiia.mp4",
+        "poster": "/assets/videos/aunt_katiia_poster.jpg",
+        "subtitles": "/assets/videos/aunt_katiia.vtt",
+        "fallbackText": "Привіт! Can you count how many letters are in each cousin's name? Andrii, Svyatik, Katiia, Nastiia, Daryna. Add them all up! Then add all the aunts, uncles, and grandparents too!"
+      },
+      "table": {
+        "label": "Count the letters in each name:",
+        "rows": [
+          { "name": "Andrii", "answer": 6 },
+          { "name": "Svyatik", "answer": 7 },
+          { "name": "Katiia", "answer": 6 },
+          { "name": "Nastiia", "answer": 7 },
+          { "name": "Daryna", "answer": 6 }
+        ],
+        "subtotal": 32,
+        "subtotalLabel": "Cousin letters total"
+      },
+      "followUp": {
+        "prompt": "Now add the family count:\nAunt Katiia + Aunt Lida + Uncle Oleksandr + Aunt Natalia + Grandma Vera + Grandpa Tolia = 6\n\n32 + 6 = ?",
+        "answer": 38
+      },
+      "successMessage": "38 is the SECOND number of the combination lock!",
+      "hint": "Spell each name out loud and count on your fingers"
+    },
+    {
+      "id": 10,
+      "phase": 3,
+      "title": "The Mirror Riddle",
+      "icon": "🪞",
+      "type": "poem_riddle",
+      "assignedTo": "girl",
+      "reveals": { "type": "lock_number", "position": 2, "value": 18 },
+      "poem": [
+        "I am a number, not too small,",
+        "I start the lock, and I end it all.",
+        "The first and last are just the same —",
+        "Can you guess my secret name?"
+      ],
+      "prompt": "The FIRST number of the lock was 18.\nWhat is the THIRD and last number?",
+      "answer": 18,
+      "inputType": "number",
+      "successMessage": "The lock code is: 18 – 38 – 18!",
+      "hint": "Read the riddle again — 'first and last are just the same'"
+    },
+    {
+      "id": 11,
+      "phase": 4,
+      "title": "The Word Scramble",
+      "icon": "🔤",
+      "type": "anagram",
+      "assignedTo": "both",
+      "reveals": { "type": "word_code", "value": "SHED" },
+      "letters": ["S", "H", "E", "D"],
+      "answer": "SHED",
+      "hints": [
+        { "delaySeconds": 30, "text": "🏡 It's a small building in the backyard" },
+        { "delaySeconds": 60, "text": "🐍 The snake in your poem does this with its skin" },
+        { "delaySeconds": 90, "text": "🧰 Dad keeps tools in this!" }
+      ],
+      "successMessage": "The word is SHED!",
+      "hint": "Try rearranging: what 4-letter word can you make?"
+    },
+    {
+      "id": 12,
+      "phase": 4,
+      "title": "The Grand Unlock!",
+      "icon": "🏆",
+      "type": "finale",
+      "assignedTo": "both",
+      "reveals": { "type": "treasure" },
+      "message": {
+        "title": "YOU CRACKED BOTH CODES!",
+        "numberCode": "18 – 38 – 18",
+        "wordCode": "SHED",
+        "instruction": "RUN TO THE SHED! Use the combination on the lock and claim your Easter treasure! 🐰🎁🍫"
+      }
+    }
+  ],
+
+  "family": {
+    "cousins": ["Andrii", "Svyatik", "Katiia", "Nastiia", "Daryna"],
+    "halfBrother": "Vlad",
+    "auntsUncles": ["Aunt Katiia", "Aunt Lida", "Uncle Oleksandr", "Aunt Natalia"],
+    "grandparents": [
+      { "name": "Grandma Juliaa", "location": "Italy", "origin": "Ukraine" },
+      { "name": "Grandma Vera", "location": "Poltava, Ukraine" },
+      { "name": "Grandpa Tolia", "location": "Poltava, Ukraine" }
+    ],
+    "school": "Shamrock",
+    "city": "Winnipeg"
+  },
+
+  "ui": {
+    "theme": "easter_pastel",
+    "wrongAnswerMessage": "Not quite — try again! 💪",
+    "correctAnswerMessage": "🎉 Correct!",
+    "illustrations": [
+      "bunny", "chick", "egg_blue", "flower", "egg_pink",
+      "basket", "bunny_hop", "egg_green", "chick_hat", "egg_gold",
+      "carrot", "sun", "egg_purple", "tulip", "lamb",
+      "egg_orange", "butterfly", "daisy", "egg_red", "robin"
+    ]
+  }
+}
