@@ -3,6 +3,7 @@ import { A11_ShedReveal } from '@/components/assignments/A11_ShedReveal'
 import { A12_GrandFinale } from '@/components/assignments/A12_GrandFinale'
 import { ProgressiveDisclosureAssignment } from '@/components/assignments/ProgressiveDisclosureAssignment'
 import { NumberLockAssembly } from '@/components/assignments/NumberLockAssembly'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { useGameConfig } from '@/hooks/useGameConfig'
 
 const ASSIGNMENT_MAP: Record<number, React.ComponentType> = {
@@ -25,17 +26,29 @@ export function AssignmentRouter() {
   // Hardcoded components
   const Component = ASSIGNMENT_MAP[currentAssignment]
   if (Component) {
-    return <Component key={currentAssignment} />
+    return (
+      <ErrorBoundary key={currentAssignment}>
+        <Component />
+      </ErrorBoundary>
+    )
   }
 
   // Config-based routing
   const assignmentConfig = config.assignments.find((a) => a.id === currentAssignment)
 
   if (assignmentConfig?.type === 'progressive_disclosure') {
-    return <ProgressiveDisclosureAssignment key={currentAssignment} assignmentId={currentAssignment} />
+    return (
+      <ErrorBoundary key={currentAssignment}>
+        <ProgressiveDisclosureAssignment assignmentId={currentAssignment} />
+      </ErrorBoundary>
+    )
   }
   if (assignmentConfig?.type === 'number_lock_assembly') {
-    return <NumberLockAssembly key={currentAssignment} assignmentId={currentAssignment} />
+    return (
+      <ErrorBoundary key={currentAssignment}>
+        <NumberLockAssembly assignmentId={currentAssignment} />
+      </ErrorBoundary>
+    )
   }
 
   return (

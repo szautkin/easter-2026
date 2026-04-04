@@ -3,39 +3,12 @@ import { useAssignment } from '@/hooks/useGameConfig'
 import { useGameStore } from '@/store/gameStore'
 import { CharacterInput } from '@/components/shared/CharacterInput'
 import { MediaPlayer } from '@/components/shared/MediaPlayer'
+import { AnimatedLines } from '@/components/shared/AnimatedLines'
 import { Confetti } from '@/components/shared/Confetti'
 import type { DisclosureLayer } from '@/types'
 import { cn } from '@/lib/utils'
 
 const MAX_ATTEMPTS = 3
-
-// ─── Animated Lines (no "poem" labeling) ─────────────────────
-function AnimatedLines({ lines, icon }: { lines: string[]; icon: string }) {
-  const [visibleLines, setVisibleLines] = useState(0)
-
-  useEffect(() => {
-    if (visibleLines >= lines.length) return
-    const timer = setTimeout(() => setVisibleLines((v) => v + 1), 800)
-    return () => clearTimeout(timer)
-  }, [visibleLines, lines.length])
-
-  return (
-    <div className="space-y-3">
-      <div className="text-4xl text-center">{icon}</div>
-      {lines.map((line, i) => (
-        <p
-          key={i}
-          className={cn(
-            'text-lg italic leading-relaxed transition-all duration-700 text-blue-primary',
-            i < visibleLines ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
-          )}
-        >
-          {line}
-        </p>
-      ))}
-    </div>
-  )
-}
 
 // ─── Layer Renderers ─────────────────────────────────────────
 function VideoClueContent({ layer }: { layer: Extract<DisclosureLayer, { type: 'video_clue' }> }) {
