@@ -67,12 +67,11 @@ Change these to match your physical locks.
 
 ```json
 "eggs": {
-  "numbers": [23, 37, 42, 56, 64, 71, 85, 92, 47, 87],
   "words": ["WACKY", "GOOFY", "ZIPPY", "SILLY", "BUBBY", "NINJA", "BANJO", "YUMMY", "FUNKY", "JELLY"]
 }
 ```
 
-Print these on slips, put one in each egg. Words are used as magic keys throughout the game. Numbers are optional decoys — they make the egg hunt feel bigger but aren't required by any puzzle.
+Print each word on a slip, put one in each egg. All 10 words are used as magic keys in puzzles throughout the game.
 
 ### Videos
 
@@ -137,9 +136,6 @@ Add `?mode=master` to the URL. The debug panel lets you:
 | FUNKY | "What word describes a groovy beat that makes you want to dance? '___ town'" |
 | JELLY | "What wiggly, jiggly treat comes in a bowl and wobbles when you poke it?" |
 
-### Number Eggs (Optional Decoys)
-
-The number slips (23, 37, 42, etc.) are not used by any puzzle — they serve as decoys to make the egg hunt more interesting. Kids collect them but never need them. You can reduce to fewer eggs by removing numbers entirely and only hiding word eggs + key eggs.
 
 ## Physical Setup
 
@@ -165,7 +161,6 @@ The word lock (letter combination, default: SHED) doesn't go on the chest itself
 - **13+ plastic eggs** (minimum 10 word eggs + 3 key eggs)
 - **10 eggs** with word slips: `WACKY, GOOFY, ZIPPY, SILLY, BUBBY, NINJA, BANJO, YUMMY, FUNKY, JELLY` (all 10 are used as magic keys in puzzles)
 - **3 eggs** with keys (1 real + 2 decoys)
-- **Optional**: extra eggs with number slips as decoys to make the hunt bigger
 - Hide eggs in the yard/house — mix easy and moderate hiding spots
 
 ### How It All Connects
