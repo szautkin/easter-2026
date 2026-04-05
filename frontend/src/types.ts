@@ -205,7 +205,6 @@ export interface GameConfig {
     }
   }
   eggs: {
-    numbers: number[]
     words: string[]
   }
   intake: {
