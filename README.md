@@ -152,11 +152,13 @@ The number slips (23, 37, 42, etc.) are not used by any puzzle — they serve as
 
 ### The Three Locks
 
-The game has three physical locks on the chest:
+The chest has three physical locks:
 
-1. **Key Lock** — a padlock with a physical key hidden inside one of the eggs. Two decoy keys in other eggs (only one fits). Kids find the right key by trying all three.
-2. **Word Lock** — a letter combination lock (e.g., 4-dial). Set to the word code from the app (default: SHED). The word lock guards the key lock's key — kids must solve the word lock first to access the key.
-3. **Number Lock** — a dial combination lock. Set to the number code from the app (default: 18-38-18).
+1. **Key Lock #1** — a padlock on the chest. Three keys hidden in eggs (1 real + 2 decoys). Kids try all three to find the right one.
+2. **Key Lock #2** — a second padlock. Its key is locked inside a small box secured by the word lock. Kids must crack the word code first to get the key.
+3. **Number Lock** — a dial combination lock on the chest. Set to the number code from the app (default: 18-38-18).
+
+The word lock (letter combination, default: SHED) doesn't go on the chest itself — it locks the box that holds the key for Lock #2. So the flow is: crack SHED → open word lock box → get key → open Key Lock #2, while also cracking 18-38-18 for the Number Lock and finding the right key for Key Lock #1.
 
 ### The Eggs
 
@@ -169,19 +171,17 @@ The game has three physical locks on the chest:
 ### How It All Connects
 
 ```
-Kids find eggs → collect slips + 3 keys
+Kids find eggs → collect word slips + 3 keys
          ↓
 App: Word Path → discover S, H, E, D → spell SHED
          ↓
-Open WORD LOCK with "SHED" → reveals the key lock area
+Open WORD LOCK (SHED) → get key for Key Lock #2
          ↓
-Try 3 keys → one fits the KEY LOCK
+App: Number Path → discover 1, 8, 8, 1, 8, 3 → order pairs → 18-38-18
          ↓
-App: Number Path → discover 1, 8, 3, 8, 1, 8 → order pairs → 18-38-18
+Open NUMBER LOCK (18-38-18) + try 3 keys on Key Lock #1
          ↓
-Open NUMBER LOCK with 18-38-18
-         ↓
-TREASURE CHEST OPENS! 🎁🍫🎉
+ALL THREE LOCKS OPEN → TREASURE! 🎁🍫🎉
 ```
 
 ## Tech Stack
