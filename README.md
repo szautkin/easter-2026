@@ -159,8 +159,8 @@ The word lock (letter combination, default: SHED) doesn't go on the chest itself
 ### The Eggs
 
 - **13+ plastic eggs** (minimum 10 word eggs + 3 key eggs)
-- **10 eggs** with word slips: `WACKY, GOOFY, ZIPPY, SILLY, BUBBY, NINJA, BANJO, YUMMY, FUNKY, JELLY` (all 10 are used as magic keys in puzzles)
-- **3 eggs** with keys (1 real + 2 decoys)
+- **10 eggs** with word slips + a coin each (loonie/toonie): `WACKY, GOOFY, ZIPPY, SILLY, BUBBY, NINJA, BANJO, YUMMY, FUNKY, JELLY` (all 10 words are used as magic keys in puzzles — the coins are bonus loot)
+- **3 eggs** with keys (1 real + 2 decoys) + a coin each
 - Hide eggs in the yard/house — mix easy and moderate hiding spots
 
 ### How It All Connects
