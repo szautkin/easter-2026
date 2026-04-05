@@ -1,52 +1,57 @@
-# Easter 2026 Egg Hunt
+# Easter Egg Hunt
 
 ## Project Overview
-Interactive Easter egg hunt web app for kids (ages 7-12). 20 intake riddles + 12 main assignments → progressive code reveal → two physical locks (18-38-18 + SHED) → treasure in the shed.
+Config-driven Easter egg hunt web app for kids (ages 7-12). Hub-and-spoke game with two lock paths (word lock + number lock). Progressive disclosure assignments with video clues, magic word gates, and poem riddles. Drag-and-drop letter/number ordering. Physical treasure hunt finale.
 
 ## Tech Stack
 - React 19 + TypeScript + Vite 6
-- Tailwind CSS 4 (using `@import "tailwindcss"` and `@theme`)
-- Zustand (state management with localStorage persistence)
-- react-dnd (drag-and-drop for word scramble)
-- Framer Motion (animations)
+- Tailwind CSS 4 (`@import "tailwindcss"` with `@theme` tokens)
+- Zustand (state with localStorage persistence + migration)
+- react-dnd (drag-and-drop with touch support)
 - Lucide React (icons)
 - canvas-confetti (celebrations)
 
 ## Project Structure
 ```
 frontend/src/
-├── App.tsx                    # Main shell: header, code board, router, progress
-├── types.ts                   # All TypeScript interfaces
-├── store/gameStore.ts         # Zustand store with persist middleware
-├── hooks/useGameConfig.ts     # Config access hooks
-├── config/easter-2026-config.json  # ALL game content
-├── lib/utils.ts               # cn(), formatTime(), normalizeAnswer()
+├── App.tsx                          # Shell: header, hub/path routing, timer
+├── types.ts                         # All TypeScript interfaces
+├── store/gameStore.ts               # Zustand store, path playlists, state machine
+├── hooks/useGameConfig.ts           # Config access
+├── config/easter-2026-config.json   # ALL game content (customize this!)
+├── lib/utils.ts                     # cn(), formatTime(), fireSparkle()
 ├── components/
-│   ├── shared/                # Reusable: CharacterInput, MediaPlayer, etc.
-│   ├── assignments/           # A01-A12 assignment components
-│   ├── CodeBoard.tsx          # Lock code display
-│   ├── CountdownTimer.tsx     # 60min countdown
-│   ├── ProgressBar.tsx        # Phase + completion tracking
-│   ├── EggIntake.tsx          # Phase 0: 20 riddle cards
-│   ├── RiddleCard.tsx         # Single intake riddle
-│   └── AssignmentRouter.tsx   # Phase/assignment switching
+│   ├── HubPage.tsx                  # Hub with 3 locks + 2 path tiles
+│   ├── AssignmentRouter.tsx         # Routes to assignment components
+│   ├── ErrorBoundary.tsx            # Per-assignment crash recovery
+│   ├── CountdownTimer.tsx           # 60min countdown
+│   ├── ProgressBar.tsx              # Path progress tracking
+│   ├── MasterPanel.tsx              # Debug/test panel (?mode=master)
+│   ├── CodeBoard.tsx                # Lock code display
+│   ├── shared/
+│   │   ├── CharacterInput.tsx       # Per-character input cells
+│   │   ├── MediaPlayer.tsx          # Video (local, YouTube, Google Drive)
+│   │   ├── DraggableItem.tsx        # Reusable DnD tile
+│   │   ├── AnimatedLines.tsx        # Staggered poem reveal (memoized)
+│   │   └── Confetti.tsx             # Celebration animation
+│   └── assignments/
+│       ├── ProgressiveDisclosureAssignment.tsx  # Video → magic word → poem → answer
+│       ├── A11_ShedReveal.tsx       # Word lock: drag letters into order
+│       ├── A12_GrandFinale.tsx      # Victory screen
+│       └── NumberLockAssembly.tsx   # Number lock: drag pairs into order
 ```
-
-## Key Patterns
-- Path alias: `@/` → `./src/`
-- All game content is config-driven via `easter-2026-config.json`
-- State persists to localStorage via Zustand persist middleware
-- Assignments lazy-loaded via React.lazy
-- Custom Tailwind theme with `--color-blue-primary`, `--color-yellow-accent`, etc.
 
 ## Commands
 ```bash
 cd frontend
-npm run dev    # Dev server
-npm run build  # Production build
-npx tsc --noEmit  # Type check
+npm install    # Install dependencies
+npm run dev    # Dev server (http://localhost:5173)
+npm run build  # Production build (output: dist/)
 ```
 
-## Documentation
-- `project_info/` — user stories, ADRs, progress, agent assignments
-- `dev_info/` — game design plan, config JSON
+## Key Patterns
+- Path alias: `@/` → `./src/`
+- All game content in `easter-2026-config.json` — edit to customize
+- Hub-and-spoke: idle → hub → word_path/number_path → hub → complete
+- Master mode: add `?mode=master` to URL for debug controls
+- localStorage persistence with v2 migration

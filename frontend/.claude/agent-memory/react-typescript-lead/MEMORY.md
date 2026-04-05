@@ -1,1 +1,0 @@
-- [Easter 2026 Frontend Architecture](project_architecture.md) -- Core patterns, state management, timer design, and review findings from Code Review #1

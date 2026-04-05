@@ -185,7 +185,7 @@ export interface GameConfig {
   meta: {
     event: string
     version: string
-    lastUpdated: string
+    description?: string
   }
   timer: {
     durationSeconds: number
@@ -214,14 +214,6 @@ export interface GameConfig {
     riddles: IntakeRiddle[]
   }
   assignments: Assignment[]
-  family: {
-    cousins: string[]
-    halfBrother: string
-    auntsUncles: string[]
-    grandparents: Array<{ name: string; location: string; origin?: string }>
-    school: string
-    city: string
-  }
   ui: {
     theme: string
     wrongAnswerMessage: string

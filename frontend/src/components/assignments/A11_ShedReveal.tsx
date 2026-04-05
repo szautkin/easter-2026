@@ -21,16 +21,7 @@ function ShedRevealInner() {
 
   const isSolved = progress?.solved ?? false
 
-  const [letters, setLetters] = useState<string[]>(() => {
-    const p = wordCode.split('')
-    do {
-      for (let i = p.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
-        ;[p[i], p[j]] = [p[j], p[i]]
-      }
-    } while (p.join('') === wordCode)
-    return p
-  })
+  const [letters, setLetters] = useState<string[]>(['D', 'E', 'H', 'S'])
 
   const [allCorrect, setAllCorrect] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
@@ -96,7 +87,7 @@ function ShedRevealInner() {
           {assignment.title}
         </h2>
         <div className="flex items-center justify-center gap-2">
-          {wordCode.split('').sort().map((l, i) => (
+          {['D', 'E', 'H', 'S'].map((l, i) => (
             <div key={i} className="w-10 h-12 flex items-center justify-center text-xl font-bold font-mono bg-yellow-tint border-2 border-yellow-accent text-blue-primary rounded-lg">{l}</div>
           ))}
         </div>
